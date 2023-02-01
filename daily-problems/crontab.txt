@@ -1,0 +1,1 @@
+5 0 * * * /usr/bin/python3 <PATH/leetcode-scrapper.py>

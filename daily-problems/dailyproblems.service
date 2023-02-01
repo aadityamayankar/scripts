@@ -1,0 +1,13 @@
+[Unit]
+Description=Gunicorn instance to serve api
+After=network.target
+
+[Service]
+User=root
+Group=www-data
+WorkingDirectory=<dir>
+Environment="PATH=<venv-path>"
+ExecStart=python -m <gunicorn-path> api:app -k uvicorn.workers.UvicornWorker
+
+[Install]
+WantedBy=multi-user.target
